@@ -38,12 +38,8 @@ mongoose.connection.on('error', () => {
 })
 
 // Server run
-let port = process.env.PORT;
-if (port == null || port == "") {
-    port = 8000;
-}
-app.listen(_port, () => {
-    console.log('Server is running on port: ' + _port)
+app.listen(port, () => {
+    console.log('Server is running on port: ' + port)
 })
 
 app.get('/', (req, res) => {
