@@ -10,7 +10,8 @@ const accout = require('./routes/account');
 const Post = require('./models/post');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
+// const port = 3000;
 
 app.use(passport.initialize());
 app.use(passport.session());
