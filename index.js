@@ -44,6 +44,7 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
+    console.log(config.db);
     console.log('test');
     Post.find().then( posts => {
         res.json(posts)
